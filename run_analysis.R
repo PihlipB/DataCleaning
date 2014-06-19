@@ -2,12 +2,12 @@
 
 setwd("~/UCI HAR Dataset/")
 
-subjectTest<-read.table("~/DataScience/UCI HAR Dataset/test/subject_test.txt")
-Xtest<-read.table("~/DataScience/UCI HAR Dataset/test/X_test.txt")
-Ytest<-read.table("~/DataScience/UCI HAR Dataset/test/Y_test.txt")
-subjectTrain<-read.table("~/DataScience/UCI HAR Dataset/train/subject_train.txt")
-Xtrain<-read.table("~/DataScience/UCI HAR Dataset/train/X_train.txt")
-Ytrain<-read.table("~/DataScience/UCI HAR Dataset/train/Y_train.txt")
+subjectTest<-read.table("~/UCI HAR Dataset/test/subject_test.txt")
+Xtest<-read.table("~/UCI HAR Dataset/test/X_test.txt")
+Ytest<-read.table("~/UCI HAR Dataset/test/Y_test.txt")
+subjectTrain<-read.table("~/UCI HAR Dataset/train/subject_train.txt")
+Xtrain<-read.table("~/UCI HAR Dataset/train/X_train.txt")
+Ytrain<-read.table("~/UCI HAR Dataset/train/Y_train.txt")
 
 testdata<-rbind(Xtrain,Xtest)
 SDdata<-apply(testdata[,1:561],1,function(x) sd(x))
